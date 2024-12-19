@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Name="BrailleBookBase" ParentName="BookBase" Abstract="True">
+        <thingClass>BrailleBooks.BrailleBook</thingClass>
+    </ThingDef>
+
+    <ThingDef ParentName="BrailleBookBase">
+        <defName>Braille_TextBook</defName>
+        <label>braille textbook</label>
+        <description>A book written in braille which focuses on teaching skills.</description>
+        <graphicData>
+            <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <uiIconPath>Things/Item/Book/Textbook/Textbook</uiIconPath>
+        <statBases>
+            <MarketValue>160</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Book">
+                <nameMaker>Namer_TextBook</nameMaker>
+                <descriptionMaker>Description_SkillBook</descriptionMaker>
+                <ageYearsRange>100~200</ageYearsRange>
+                <openGraphic>
+                <texPath>Things/Item/Book/Textbook/Textbook_Open</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>0.7</drawSize>
+                </openGraphic>
+                <verticalGraphic>
+                <texPath>Things/Item/Book/Textbook/Textbook_Vertical</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <addTopAltitudeBias>true</addTopAltitudeBias>
+                </verticalGraphic>
+                <doers>
+                    <li Class="BookOutcomeProperties_GainSkillExp" />
+                </doers>
+            </li>
+        </comps>
+    </ThingDef>
+  
+    <ThingDef ParentName="BrailleBookBase">
+        <defName>Braille_Schematic</defName>
+        <label>braille schematic</label>
+        <description>A book written in braille which describes technology and methods for using it. Reading schematics can help unlock new technologies.</description>
+        <graphicData>
+            <texPath>Things/Item/Book/Schematic/Schematic</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+            <uiIconPath>Things/Item/Book/Schematic/Schematic</uiIconPath>
+            <statBases>
+            <MarketValue>150</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Book">
+                <nameMaker>Namer_Schematic</nameMaker>
+                <descriptionMaker>Description_Schematic</descriptionMaker>
+                <ageYearsRange>100~200</ageYearsRange>
+                <openGraphic>
+                <texPath>Things/Item/Book/Schematic/Schematic_Open</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>0.7</drawSize>
+                </openGraphic>
+                <verticalGraphic>
+                <texPath>Things/Item/Book/Schematic/Schematic_Vertical</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <addTopAltitudeBias>true</addTopAltitudeBias>
+                </verticalGraphic>
+                <doers>
+                    <li Class="BookOutcomeProperties_GainResearch">
+                        <tabs>
+                        <Main />
+                        </tabs>
+                        <exclude>
+                        <BasicMechtech MayRequire="Ludeon.RimWorld.Biotech"/>
+                        <StandardMechtech MayRequire="Ludeon.RimWorld.Biotech"/>
+                        <HighMechtech MayRequire="Ludeon.RimWorld.Biotech"/>
+                        </exclude>
+                    </li>
+                </doers>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <ThingDef ParentName="BrailleBookBase">
+        <defName>Braille_Novel</defName>
+        <label>braille novel</label>
+        <description>A book written in braille containing fictional or true stories for the pleasure and edification of the reader.</description>
+        <graphicData>
+            <texPath>Things/Item/Book/Novel/Novel</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <uiIconPath>Things/Item/Book/Novel/Novel</uiIconPath>
+        <statBases>
+            <MarketValue>160</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Book">
+                <nameMaker>Namer_Novel</nameMaker>
+                <descriptionMaker>Description_Novel</descriptionMaker>
+                <ageYearsRange>100~200</ageYearsRange>
+                <openGraphic>
+                <texPath>Things/Item/Book/Novel/Novel_Open</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>0.7</drawSize>
+                </openGraphic>
+                <verticalGraphic>
+                <texPath>Things/Item/Book/Novel/Novel_Vertical</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <addTopAltitudeBias>true</addTopAltitudeBias>
+                </verticalGraphic>
+                <doers>
+                    <li Class="BookOutcomeProperties_JoyFactorModifier" />
+                </doers>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

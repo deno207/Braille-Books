@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<JoyGiverDef>
+    <defName>BrailleReading</defName>
+    <giverClass>BrailleBooks.JoyGiver_BrailleRead</giverClass>
+    <baseChance>3</baseChance>
+    <jobDef>BrailleReading</jobDef>
+    <joyKind>Reading</joyKind>
+    <requiredCapacities>
+        <li>Manipulation</li>
+    </requiredCapacities>
+</JoyGiverDef>
+
+</Defs>

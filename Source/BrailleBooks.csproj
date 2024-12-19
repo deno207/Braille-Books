@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<Version>0.2</Version>
+		<AssemblyTitle>BrailleBooks</AssemblyTitle>
+		<OutputPath>..\Assemblies\</OutputPath>
+		<!-- Remove this if you multi-target and need the created net*, netcoreapp* subdirs -->
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4297" />
+	</ItemGroup>
+</Project>

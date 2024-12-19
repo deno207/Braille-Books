@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <JobDef>
+        <defName>BrailleReading</defName>
+        <driverClass>BrailleBooks.JobDriver_BrailleReading</driverClass>
+        <casualInterruptible>false</casualInterruptible>
+        <joyDuration>8000</joyDuration>
+        <joyKind>Reading</joyKind>
+        <reportString>reading TargetA</reportString>
+    </JobDef>
+</Defs>

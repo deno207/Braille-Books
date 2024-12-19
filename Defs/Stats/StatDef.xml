@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <StatDef>
+        <defName>BrailleReadingSpeed</defName>
+        <label>braille reading speed</label>
+        <description>A multiplier on how fast this person can read braille.</description>
+        <category>PawnWork</category>
+        <showDevelopmentalStageFilter>Child, Adult</showDevelopmentalStageFilter>
+        <defaultBaseValue>0.8</defaultBaseValue>
+        <minValue>0</minValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <skillNeedFactors>
+            <li Class="SkillNeed_BaseBonus">
+                <skill>Intellectual</skill>
+                <baseValue>1</baseValue>
+                <required>false</required>
+                <bonusPerLevel>0.02</bonusPerLevel>
+            </li>
+        </skillNeedFactors>
+        <capacityFactors>
+            <li>
+                <capacity>Consciousness</capacity>
+                <weight>1</weight>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <weight>1</weight>
+                <max>1.25</max>
+            </li>
+        </capacityFactors>
+        <parts>
+            <li Class="StatPart_Age" MayRequire="Ludeon.RimWorld.Biotech">
+                <useBiologicalYears>true</useBiologicalYears>
+                <humanlikeOnly>true</humanlikeOnly>
+                <curve>
+                    <points>
+                        <li>(3,0.05)</li>
+                        <li>(13,1)</li>
+                    </points>
+                </curve>
+            </li>
+        </parts>
+        <displayPriorityInCategory>4600</displayPriorityInCategory>
+    </StatDef>
+</Defs>

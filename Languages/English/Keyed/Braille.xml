@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BookCantHold>{PAWN_nameDef} is Unable to hold book</BookCantHold>
+</LanguageData>
